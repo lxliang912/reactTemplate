@@ -1,11 +1,13 @@
+/*
+* file: Login.js
+* author: lxliang
+* desc: 登录页面
+*/
+
 import React from 'react';
 import './Login.css';
 
 class Login extends React.Component {
-    componentDidMount() {
-        console.log(123);
-    }
-
     render() {
         return (
             <div>

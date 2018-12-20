@@ -1,3 +1,9 @@
+/*
+* file: Bar.js
+* author: lxliang
+* desc: 导航栏组件，作为通用组件
+*/
+
 import React from 'react';
 
 class Bar extends React.Component {

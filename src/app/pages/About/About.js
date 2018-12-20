@@ -1,3 +1,9 @@
+/*
+* file: About.js
+* author: lxliang
+* desc: 关于页面
+*/
+
 import React, { Component } from 'react';
 import './About.css';
 

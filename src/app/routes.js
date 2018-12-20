@@ -9,7 +9,7 @@ import About from './pages/About/About'
 import Login from './pages/Login/Login'
 
 export default [{
-    'path': '/home',
+    'path': '/',
     'component': Home
 }, {
     'path': '/login',

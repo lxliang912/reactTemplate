@@ -1,14 +1,12 @@
 /*
-* file: app.js
+* file: App.js
 * author: lxliang
-* desc: 应用容器部分
+* desc: 应用程序容器，用于组装应用
 */
 
 import React from 'react';
 import {
-  BrowserRouter,
   withRouter,
-  Redirect,
   Switch,
   Route
 } from 'react-router-dom';
@@ -28,6 +26,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    //重新加载页面时初始化路由路径
     this.pushRouter(0);
   }
 
@@ -36,6 +35,7 @@ class App extends React.Component {
     this.pushRouter(index);
   }
 
+  // 封装路由跳转通用方法
   pushRouter(index) {
     this.props.history.push(routeList[index].path);
   }
@@ -48,11 +48,10 @@ class App extends React.Component {
           {
             routeList.map((item, index) => {
               return (
-                <Route key={index} path={item.path} component={item.component} />
+                <Route key={index} exact={true} path={item.path} component={item.component} />
               )
             })
           }
-          <Redirect to={routeList[0].path}></Redirect>
         </Switch>
       </div>
     );
