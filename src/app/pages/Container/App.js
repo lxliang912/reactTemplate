@@ -37,7 +37,11 @@ class App extends React.Component {
 
   // 封装路由跳转通用方法
   pushRouter(index) {
-    this.props.history.push(routeList[index].path);
+    if (index === 1) {
+      this.props.history.push(routeList[index].url + '/' + 1);
+    } else {
+      this.props.history.push(routeList[index].url);
+    }
   }
 
   render() {

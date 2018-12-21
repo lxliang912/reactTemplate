@@ -8,13 +8,23 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Login from './pages/Login/Login'
 
+/*
+ * path: 路由配置路径
+ * url: 路由请求路径
+ */
 export default [{
     'path': '/',
+    'url': '/',
+    'name': 'home',
     'component': Home
 }, {
-    'path': '/login',
+    'path': '/login/:id',
+    'url': '/login',
+    'name': 'login',
     'component': Login
 }, {
     'path': '/about',
+    'url': '/about',
+    'name': 'about',
     'component': About
 }]
