@@ -18,6 +18,7 @@ class Login extends React.Component {
             <div>
                 <input className="item" type="text" placeholder="输入用户名" />
                 <input className="item" type="text" placeholder="输入密码" />
+                <input className="item fs12" type="button" value="登录" />
             </div>
         );
     }
