@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import { Button } from 'antd';
 
 import './Login.css';
 
@@ -19,6 +20,7 @@ class Login extends React.Component {
                 <input className="item" type="text" placeholder="输入用户名" />
                 <input className="item" type="text" placeholder="输入密码" />
                 <input className="item fs12" type="button" value="登录" />
+                <Button type="primary" block>Primary</Button>
             </div>
         );
     }

@@ -6,6 +6,9 @@ import {
 
 import App from './pages/Container/App'
 
+// antd design style lib
+import 'antd/dist/antd.css';
+
 // common style lib
 import './style/index.css';
 
