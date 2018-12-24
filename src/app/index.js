@@ -4,8 +4,11 @@ import {
     BrowserRouter,
 } from 'react-router-dom';
 
-import './style/index.css';
 import App from './pages/Container/App'
+
+// common style lib
+import './style/index.css';
+
 import * as serviceWorker from './utils/serviceWorker';
 
 ReactDOM.render(
