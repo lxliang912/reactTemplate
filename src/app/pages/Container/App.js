@@ -16,6 +16,7 @@ import './App.css';
 import routeList from '../../routes';
 // 导航栏组件
 import Bar from '../Components/Bar';
+import { utils } from '../../utils/util';
 
 class App extends React.Component {
   constructor(props) {
@@ -26,6 +27,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    console.log(utils.isEmpty(''));
+
     //重新加载页面时初始化路由路径
     this.pushRouter(0);
   }
