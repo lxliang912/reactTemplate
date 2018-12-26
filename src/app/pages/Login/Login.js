@@ -11,6 +11,7 @@ import './Login.css';
 
 class Login extends React.Component {
     componentDidMount() {
+        // 获取路由参数
         console.log(this.props.match.params);
     }
 
@@ -19,7 +20,6 @@ class Login extends React.Component {
             <div>
                 <input className="item" type="text" placeholder="输入用户名" />
                 <input className="item" type="text" placeholder="输入密码" />
-                <input className="item fs12" type="button" value="登录" />
                 <Button type="primary" block>Primary</Button>
             </div>
         );

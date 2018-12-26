@@ -16,6 +16,7 @@ import './App.css';
 import routeList from '../../routes';
 // 导航栏组件
 import Bar from '../Components/Bar';
+// 通用工具库
 import { utils } from '../../utils/util';
 
 class App extends React.Component {
@@ -23,6 +24,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       routeIndex: 0,
+      test: 'test',
     }
   }
 
@@ -50,12 +52,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Bar changeRouter={this.changeRouter.bind(this)} />
+        <Bar test={this.state.test} changeRouter={this.changeRouter.bind(this)} />
         <Switch>
           {
             routeList.map((item, index) => {
               return (
-                <Route key={index} exact={true} path={item.path} component={item.component} />
+                <Route key={index} exact path={item.path} component={item.component} />
               )
             })
           }

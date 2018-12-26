@@ -28,13 +28,16 @@ class Bar extends React.Component {
     }
 
     componentDidMount() {
-
+        console.log(this.props.test);
     }
 
     selectTab(index) {
         this.setState({
             curSelectTab: index,
         });
+
+        // 使用ref对操作DOM
+        console.log(this.refs['tab' + index]);
 
         this.props.changeRouter(index);
     }
@@ -44,7 +47,7 @@ class Bar extends React.Component {
             <div className='pos-fix left0 right0 bottom0 padding5 dis-flex flex-center bt1-bar'>
                 {this.state.tabList.map((item, index) => {
                     return (
-                        <div className='flex1' key={item.name} onClick={this.selectTab.bind(this, index)}>
+                        <div className='flex1' key={item.name} onClick={this.selectTab.bind(this, index)} ref={'tab' + index}>
                             <img className='width25' src={this.state.curSelectTab === index ? item.tab_p : item.tab_n} alt="" />
                             <p className={`${this.state.curSelectTab === index ? 'fg-409EFF' : 'fg-999999'} fs10`}>{item.name}</p>
                         </div>

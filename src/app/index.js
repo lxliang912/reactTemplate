@@ -4,9 +4,6 @@ import {
     BrowserRouter,
 } from 'react-router-dom';
 
-// import common util function
-import './utils/util.js';
-
 // import container
 import App from './pages/Container/App';
 
