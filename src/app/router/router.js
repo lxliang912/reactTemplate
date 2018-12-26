@@ -4,9 +4,9 @@
  * desc: 路由管理，用于组织路由列表
  * date: 2018/12/12
  */
-import Home from './pages/Home/Home'
-import About from './pages/About/About'
-import Login from './pages/Login/Login'
+import Home from '../pages/Home/Home'
+import About from '../pages/About/About'
+import Login from '../pages/Login/Login'
 
 /*
  * path: 路由配置路径
